@@ -41,7 +41,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                //将元素坐标传给搜索页
+                int location[] = new int[2];
+                SearchTV.getLocationOnScreen(location);
+                intent.putExtra("x",location[0]);
+                intent.putExtra("y",location[1]);
                 startActivity(intent);
+                overridePendingTransition(0,0);
             }
         });
 

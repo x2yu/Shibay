@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/activity_search"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/activity_search"
     android:orientation="vertical"
+
     >
+
     <FrameLayout
+        android:id="@+id/frame_bg"
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:padding="10dp"
         android:background="@color/colorPrimary"
-        android:id="@+id/search_bg">
+        android:padding="10dp">
+
         <ImageView
+            android:id="@+id/iv_arrow"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:id="@+id/search_arrow"
             android:layout_gravity="center|left"
-            android:src="@drawable/arrow_right"/>
+            android:src="@drawable/arrow_right" />
+
         <TextView
+            android:id="@+id/tv_search_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/search_bg"
             android:gravity="center"
             android:padding="10dp" />
+
+
         <EditText
+            android:id="@+id/tv_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -33,18 +41,19 @@
             android:gravity="center"
             android:imeOptions="actionSearch"
             android:includeFontPadding="false"
-            android:hint="输入中文或者英文"
-            android:textSize="15sp"
+            android:hint="查询中文或者英文"
             android:textColor="#bebebe"
-            />
+            android:textColorHint="#bebebe"
+            android:textSize="15sp" />
+
         <TextView
+            android:id="@+id/tv_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/serach_icon"
             android:layout_gravity="center|right"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:text="搜索"
-            android:textColor="#fff"/>
+            android:textColor="#fff" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,10 +64,20 @@
             android:textSize="16sp" />
     </FrameLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="我是搜索页"
-        />
+    <FrameLayout
+        android:id="@+id/frame_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        >
+        <TextView
+            android:id="@+id/tv_serachContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我是搜索页"
+            android:textSize="16sp"
+            android:padding="10dp"
+            />
+    </FrameLayout>
 </LinearLayout>
