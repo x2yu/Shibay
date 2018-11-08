@@ -19,9 +19,9 @@
 
                 <gradient
                     android:angle="0"
-                    android:centerColor="#388E8E"
-                    android:endColor="@color/colorPrimary"
-                    android:startColor="#20B2AA" />
+                    android:centerColor="#FF5D61"
+                    android:endColor="#FE4D69"
+                    android:startColor="#FF6C5E" />
             </shape>
         </clip>
     </item>

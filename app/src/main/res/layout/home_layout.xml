@@ -103,7 +103,7 @@
                 android:layout_weight="1"
                 android:includeFontPadding="false" />
 
-            <Button
+            <TextView
                 android:id="@+id/make_plan"
                 android:layout_width="0dp"
                 android:layout_height="30dp"
@@ -111,7 +111,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/search_bg"
+                android:background="@drawable/modify_plan"
                 android:gravity="center"
                 android:text="修改计划"
                 android:textColor="#bebebe" />
@@ -215,14 +215,18 @@
     <Button
         android:id="@+id/start_learn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:text="辞海无涯勤做舟"
-        android:background="@drawable/start_button"
+        android:background="@drawable/start_img_ridus"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="30dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_margin="10dp"/>
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
 
 </LinearLayout>

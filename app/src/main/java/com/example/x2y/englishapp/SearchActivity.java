@@ -10,8 +10,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -83,6 +85,22 @@ public class SearchActivity extends AppCompatActivity {
         mSearchContent = (TextView)findViewById(R.id.tv_serachContent);
 
         mSearchTxt.setOnClickListener(new searchListener());//设置搜索tv的动作监听
+
+        //修改绑定编辑框回车键功能 待修正
+        mHintTxt.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH
+                        || (event != null && event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
+                            mSearchTxt.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
+       // mSearchTxt.setOnClickListener(new searchListener());//设置搜索tv的动作监听
+
+
         handler = new TranslateHandler(this,mSearchContent);
 
         mArrowImg.setOnClickListener(new View.OnClickListener() {
@@ -406,10 +424,10 @@ public class SearchActivity extends AppCompatActivity {
 
     private void setDuration(ValueAnimator translateVa, ValueAnimator scaleVa,
                              ValueAnimator translateVaX, ValueAnimator alphaVa) {
-        alphaVa.setDuration(350);
+        alphaVa.setDuration(500);
         translateVa.setDuration(350);
-        scaleVa.setDuration(350);
-        translateVaX.setDuration(350);
+        scaleVa.setDuration(500);
+        translateVaX.setDuration(500);
     }
 
     private void star(ValueAnimator translateVa, ValueAnimator scaleVa, ValueAnimator translateVaX,
@@ -420,3 +438,4 @@ public class SearchActivity extends AppCompatActivity {
         translateVaX.start();
     }
 }
+

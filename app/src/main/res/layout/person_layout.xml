@@ -2,7 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
    >
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,11 +10,6 @@
         android:orientation="vertical"
         android:background="#EDEDED">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ScrollView>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -165,7 +160,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
-            android:background="#fff">
+            android:background="#fff"
+            >
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -175,6 +171,7 @@
                 android:background="@drawable/person_button_bg"
                 android:padding="10dp"
                 android:textSize="18dp"
+                android:textColor="#808080"
                 android:drawableRight="@drawable/ic_arrow_right"
                 />
             <Button
@@ -186,6 +183,7 @@
                 android:background="@drawable/person_button_bg"
                 android:padding="10dp"
                 android:textSize="18dp"
+                android:textColor="#808080"
                 android:drawableRight="@drawable/ic_arrow_right"/>
             <Button
                 android:layout_width="match_parent"
@@ -196,6 +194,7 @@
                 android:background="@drawable/person_button_bg"
                 android:padding="10dp"
                 android:textSize="18dp"
+                android:textColor="#808080"
                 android:drawableRight="@drawable/ic_arrow_right"/>
             <Button
                 android:layout_width="match_parent"
@@ -206,6 +205,7 @@
                 android:background="@drawable/person_button_bg"
                 android:padding="10dp"
                 android:textSize="18dp"
+                android:textColor="#808080"
                 android:drawableRight="@drawable/ic_arrow_right"/>
         </LinearLayout>
 
@@ -224,6 +224,7 @@
                 android:background="@drawable/person_button_bg"
                 android:padding="10dp"
                 android:textSize="18dp"
+                android:textColor="#808080"
                 android:drawableRight="@drawable/ic_arrow_right"
                 />
         </LinearLayout>

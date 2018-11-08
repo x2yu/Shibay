@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     >
 
     <FrameLayout
         android:id="@+id/frame_bg"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="90dp"
+        android:background="@drawable/shape_gradient"
         android:padding="10dp">
 
         <ImageView
@@ -39,12 +38,14 @@
             android:layout_gravity="center"
             android:background="@null"
             android:gravity="center"
+            android:singleLine="true"
             android:imeOptions="actionSearch"
             android:includeFontPadding="false"
             android:hint="查询中文或者英文"
             android:textColor="#bebebe"
             android:textColorHint="#bebebe"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            />
 
         <TextView
             android:id="@+id/tv_search"
@@ -54,14 +55,7 @@
             android:layout_marginRight="5dp"
             android:text="搜索"
             android:textColor="#fff" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:gravity="center"
-            android:text="众少成多，积小致钜。"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+
     </FrameLayout>
 
     <FrameLayout

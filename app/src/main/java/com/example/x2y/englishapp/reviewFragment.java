@@ -16,13 +16,7 @@ public class reviewFragment extends Fragment
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.review_layout,container,false);
-        Button bt = (Button)view.findViewById(R.id.review_bt);
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"Fragment2上的按钮被点击了",Toast.LENGTH_SHORT).show();
-            }
-        });
+
         return view;
     }
 }

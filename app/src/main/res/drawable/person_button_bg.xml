@@ -1,6 +1,6 @@
 
-<ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#FF9e9e9e"
-    android:shape="rectangle">
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#D3D3D3">
 
 </ripple>

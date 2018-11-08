@@ -11,9 +11,10 @@ android:orientation="vertical"
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/colorPrimary"
-        android:padding="10dp">
+        android:layout_height="150dp"
+        android:background="@drawable/shape_gradient"
+        android:padding="10dp"
+        android:fitsSystemWindows="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,6 +31,8 @@ android:orientation="vertical"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/search_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="center"
             android:padding="10dp" />
 
@@ -50,6 +53,7 @@ android:orientation="vertical"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:text="博观约取，厚积薄发。"
+            android:layout_margin="10dp"
             android:textColor="#fff"
             android:textSize="16sp" />
 
@@ -66,6 +70,8 @@ android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?android:attr/windowBackground"
+    app:itemIconTint="@drawable/navigation_item"
+    app:itemTextColor="@drawable/navigation_item"
     app:menu="@menu/navigation" />
 
 </LinearLayout>
