@@ -18,9 +18,9 @@
         <activity
             android:name=".SearchActivity"
             android:theme="@style/Translucent" />
-        <activity android:name=".WordBookActivity" />
-        <activity android:name=".LexiconActivity" />
-        <activity android:name=".WordProgressActivity" />
+        <activity android:name=".PersonPage.WordBookActivity" />
+        <activity android:name=".PersonPage.LexiconActivity" />
+        <activity android:name=".PersonPage.WordProgressActivity" />
         <activity android:name=".SplashActivity"
             android:theme="@style/AppTheme.SplashTheme">
             <intent-filter>

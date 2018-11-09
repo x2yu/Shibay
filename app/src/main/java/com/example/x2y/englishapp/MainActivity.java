@@ -1,7 +1,6 @@
 package com.example.x2y.englishapp;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,9 +9,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.x2y.englishapp.Fragment.MyFragAdpter;
+import com.example.x2y.englishapp.Fragment.homeFragment;
+import com.example.x2y.englishapp.Fragment.personFragment;
+import com.example.x2y.englishapp.Fragment.reviewFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,9 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 // 当滑动到某一位置，导航栏对应位置被按下
                  navigation.getMenu().getItem(i).setChecked(true);
                 // 这里使用navigation.setSelectedItemId(position);无效，
-                // setSelectedItemId(position)的官网原句：Set the selected
-                // menu item ID. This behaves the same as tapping on an item
-                // 未找到原因
+
 
             }
 

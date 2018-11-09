@@ -1,10 +1,12 @@
-package com.example.x2y.englishapp;
+package com.example.x2y.englishapp.PersonPage;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.x2y.englishapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
