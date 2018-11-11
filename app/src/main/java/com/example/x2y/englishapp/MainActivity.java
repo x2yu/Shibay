@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.x2y.englishapp.Fragment.MyFragAdpter;
+import com.example.x2y.englishapp.Adapter.MyFragAdpter;
 import com.example.x2y.englishapp.Fragment.homeFragment;
 import com.example.x2y.englishapp.Fragment.personFragment;
 import com.example.x2y.englishapp.Fragment.reviewFragment;
