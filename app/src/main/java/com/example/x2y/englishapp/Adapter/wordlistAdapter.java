@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.x2y.englishapp.Fragment.wordlistFragment;
+
 public class wordlistAdapter extends FragmentPagerAdapter {
     private static int PAGE_COUNT;//表示要展示的页面数量
     private Context mContext;

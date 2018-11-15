@@ -4,10 +4,16 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.example.x2y.englishapp.Adapter.WordAdapter;
 import com.example.x2y.englishapp.Adapter.wordlistAdapter;
 import com.example.x2y.englishapp.R;
+import com.example.x2y.englishapp.bean.Word;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LexiconActivity extends AppCompatActivity {
 
@@ -15,7 +21,8 @@ public class LexiconActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private android.support.v4.app.FragmentManager fm;
 
-
+    private RecyclerView wordlist_recyclerview;
+    private List<Word> wordList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

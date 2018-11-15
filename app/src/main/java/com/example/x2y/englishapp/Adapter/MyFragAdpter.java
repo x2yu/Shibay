@@ -1,4 +1,4 @@
-package com.example.x2y.englishapp.Fragment;
+package com.example.x2y.englishapp.Adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
