@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 
 public class SplashActivity extends AppCompatActivity {
-    private final int SPLASH_DISPALY_LENGHT = 3000;
+    private final int SPLASH_DISPALY_LENGHT = 1000;
     private Handler handler;
 
     //在splash页面禁用返回键

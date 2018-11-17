@@ -50,7 +50,7 @@ public class SearchActivity extends AppCompatActivity {
     private float originX;
 
     //实时搜索
-    private String YouDaoBaseUrl = "http://openapi.youdao.com/api";
+    private String YouDaoBaseUrl = "https://openapi.youdao.com/api";
     private String YouDaoFrom = "En";
     private String YouDaoTo = "zh_CHS";
     private String YouDaoappKey = "530a6449cf2e8dc3";
@@ -185,6 +185,7 @@ public class SearchActivity extends AppCompatActivity {
             new Thread() {
                 public void run() {
                     try {
+                        //调用接口，请求数据
                         AnalyzingOfJson(YouDaoUrl);
                     } catch (Exception e) {
                         e.printStackTrace();

@@ -83,6 +83,7 @@
             android:focusable="true"
             android:foreground="@drawable/ripple_bg">
             <TextView
+                android:id="@+id/listening_remember"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
