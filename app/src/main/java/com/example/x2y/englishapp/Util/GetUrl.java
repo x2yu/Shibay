@@ -34,6 +34,8 @@ public class GetUrl {
         String from = "zh-CHS";
         String to = "EN";
         String sign = null;
+        String ext ="mp3";
+        String voice ="0";
         try {
             sign = md5(appKey + query + salt+ "WFgiGLHt0wH0bZdlnlC2ueCGyZnpcZXI");
         } catch (UnsupportedEncodingException e) {
@@ -48,6 +50,8 @@ public class GetUrl {
         params.put("sign", sign);
         params.put("salt", salt);
         params.put("appKey", appKey);
+        params.put("ext",ext);
+        params.put("voice",voice);
       return  requestForHttp("https://openapi.youdao.com/api", params);
 
     }

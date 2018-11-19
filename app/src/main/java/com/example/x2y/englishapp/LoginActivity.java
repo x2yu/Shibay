@@ -100,6 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(!prefUser.getAll().isEmpty())
                             {
                                 editorUser.clear();
+                                editorUser.commit();
                             }
 
                                 editorUser.putString("name",account);
@@ -144,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
                     String password1 = data.getStringExtra("password");
                     name.setText(name1);
                     password.setText(password1);
-                }
+                } 
                 break;
                 default:
         }

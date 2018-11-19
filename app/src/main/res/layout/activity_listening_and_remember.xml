@@ -7,21 +7,38 @@
     tools:context=".ListeningAndRememberActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_gradient">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/player"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:text="播放"/>
-        <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/start_button"
+            android:layout_centerInParent="true"
+            android:text="开始"/>
+
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/word_infor"
-            android:hint="单词信息"
-            android:layout_below="@+id/player"
-            android:layout_margin="20dp"/>
+            android:id="@+id/next_button"
+            android:text="next"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/previous_button"
+            android:text="previous"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_layout"
+            android:background="@drawable/shape_gradient">
+
+        </FrameLayout>
     </RelativeLayout>
 
 

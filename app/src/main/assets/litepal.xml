@@ -1,5 +1,6 @@
 <litepal>
     <dbname value="English"></dbname>
+
     <version value="7"></version>
 
     <list>

@@ -24,16 +24,17 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".LearnActivity"/>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ListeningAndRememberActivity"></activity>
+        <activity android:name=".ListeningAndRememberActivity"/>
+
+
     </application>
 
 </manifest>
