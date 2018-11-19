@@ -137,15 +137,26 @@
             android:layout_marginTop="165dp"
          >
 
-
             <TextView
+                android:layout_width="wrap_content"
+                android:height="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="bottom"
+                android:paddingLeft="10dp"
+                android:text="已学完"
+                android:textSize="10dp"
+                />
+            <TextView
+                android:id="@+id/word_haveLearned"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="bottom"
                 android:paddingLeft="10dp"
-                android:text="已学完 854/3071"
+                android:text="2855/3071"
+                android:textStyle="bold"
                 android:textSize="14dp"
                 />
 
@@ -178,7 +189,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:max="100"
-                android:progress="100"
                 android:progressDrawable="@drawable/progressbar" />
         </LinearLayout>
 
