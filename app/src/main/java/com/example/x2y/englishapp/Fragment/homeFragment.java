@@ -28,6 +28,7 @@ public class homeFragment extends Fragment
         //初始化进度条
         initProgress(view);
         Button bt = (Button)view.findViewById(R.id.start_learn);
+
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

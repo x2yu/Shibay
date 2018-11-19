@@ -91,8 +91,8 @@
                 android:layout_toRightOf="@id/line_person_hori"
                 android:drawableLeft="@drawable/ic_local_florist_black_24dp"
                 android:layout_marginTop="5dp"
-                android:text="贝壳 9 个"
                 android:gravity="center|left"
+                android:id="@+id/shell_number"
 
                 />
         </RelativeLayout>
