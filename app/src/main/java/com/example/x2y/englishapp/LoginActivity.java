@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                 {
                     //查询数据库
                     List<User> userlist = DataSupport
-                            .where("name ="+account)
+                            .where("name =?",new String(name.getText().toString()))
                             .find(User.class);
                     //若不为空则说明由此账户
                     if(!userlist.isEmpty())

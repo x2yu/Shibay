@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
                 password2=(EditText)findViewById(R.id.pw_etext2);
                 name=(EditText)findViewById(R.id.name_etext);
                 List<User> userlist = DataSupport
-                        .where("name ="+name.getText().toString())
+                        .where("name =?",new String(name.getText().toString()))
                         .find(User.class);
                 //若查询结果为空，则提醒用户并清空输入框
                 if(userlist.size()!=0)
