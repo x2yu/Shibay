@@ -12,4 +12,18 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!--review_layout布局文件字符-->
+    <string name="selftest">自我评测</string>
+    <string name="review">温故知新</string>
+    <string name="listen">听音速记</string>
+    <string name="chooseinchinese">中文选词</string>
+    <string name="spelling">拼写练习</string>
+    <!--activity_self_test布局文件字符-->
+    <string name="remember">记得</string>
+    <string name="forget">不记得</string>
+    <string name="per_word">上一个</string>
+    <string name="next_word">下一个</string>
+    <!--SelfTestActivity文件字符-->
+    <string name="next_toast">没有下一个单词了亲</string>
+    <string name="previous_toast">没有上一个单词了亲</string>
 </resources>
