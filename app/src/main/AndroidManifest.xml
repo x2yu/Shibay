@@ -31,14 +31,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
+        <activity android:name=".LearnActivity"/>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".SelfTestActivity" >
+        <activity android:name=".ReviewPage.SelfTestActivity" >
             <intent-filter>
                 <action android:name="SELF_TEST"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ReviewActivity">
+        <activity android:name=".ReviewPage.ReviewActivity">
             <intent-filter>
                 <action android:name="REVIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>

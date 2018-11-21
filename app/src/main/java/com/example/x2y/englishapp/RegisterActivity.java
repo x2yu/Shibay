@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.x2y.englishapp.User.User;
 
+import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
 
 import java.util.List;

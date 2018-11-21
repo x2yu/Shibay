@@ -7,9 +7,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.x2y.englishapp.Adapter.MyFragAdpter;
 import com.example.x2y.englishapp.Fragment.homeFragment;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     BottomNavigationView navigation;//底部导航栏对象
     List<Fragment>listFragment;//存储页面对象
+    private long exitTime = 0;//双击back退出间隔时间
 
 
     @Override
@@ -116,5 +119,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            exit();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
+    //记录当前时间，若果两次点击间隔小于2s 退出
+    private void exit(){
+        if((System.currentTimeMillis() - exitTime)>2000){
+            Toast.makeText(this, "再按一次退出拾贝", Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        }else{
+            finish();
+            //System.exit(0);
+        }
+
+    }
 }
