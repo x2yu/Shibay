@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.x2y.englishapp.LearnActivity;
 import com.example.x2y.englishapp.R;
+import com.example.x2y.englishapp.schedule.StudyScheduleActivity;
 
 public class homeFragment extends Fragment
 {
@@ -37,6 +38,15 @@ public class homeFragment extends Fragment
                 startActivity(startlearn);
 
 
+            }
+        });
+
+        //制定学习计划
+        TextView makePlan = (TextView)view.findViewById(R.id.make_plan);
+        makePlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StudyScheduleActivity.newInstance(getContext(), null);
             }
         });
         return view;

@@ -44,6 +44,9 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".LearnActivity"/>
+        <activity android:name=".schedule.StudyScheduleActivity"/>
+        <activity android:name=".schedule.StudyScheduleBookLibraryActivity"/>
     </application>
 
 </manifest>
