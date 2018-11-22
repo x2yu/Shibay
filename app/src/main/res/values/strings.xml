@@ -26,4 +26,12 @@
     <!--SelfTestActivity文件字符-->
     <string name="next_toast">没有下一个单词了亲</string>
     <string name="previous_toast">没有上一个单词了亲</string>
+    <!--activity_spelling布局文件字符-->
+    <string name="speled">已完成：</string>
+    <string name="surplus">还剩余：</string>
+    <string name="check">检查</string>
+    <string name="spelling_success">恭喜您拼写正确！</string>
+    <string name="spelling_fail">拼写错误，请重试</string>
+    <string name="spelling_toast">提示</string>
+    <string name="review_finish_toast">恭喜您完成了本次复习</string>
 </resources>
