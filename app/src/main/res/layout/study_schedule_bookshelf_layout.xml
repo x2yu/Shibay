@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp">
+
+
+    <ImageView
+        android:id="@+id/schedule_bookshelf_show_bookImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/book_unselected"/>
+
+    <TextView
+        android:id="@+id/schedule_bookshelf_show_bookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#7f7f7f"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/schedule_bookshelf_show_operate"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/book_delete"
+        android:visibility="invisible"/>
+</FrameLayout>
