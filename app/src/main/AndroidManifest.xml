@@ -18,7 +18,8 @@
         <activity
             android:name=".SearchActivity"
             android:theme="@style/Translucent" />
-        <activity android:name=".PersonPage.WordBookActivity" />
+        <activity android:name=".PersonPage.WordBookActivity"
+            android:label="单词本"/>
         <activity android:name=".PersonPage.LexiconActivity" />
         <activity android:name=".PersonPage.WordProgressActivity" />
         <activity
@@ -31,23 +32,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".LearnActivity"/>
+        <activity android:name=".LearnActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ReviewPage.SelfTestActivity" >
+        <activity android:name=".ReviewPage.SelfTestActivity">
             <intent-filter>
-                <action android:name="SELF_TEST"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="SELF_TEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".ReviewPage.ReviewActivity">
             <intent-filter>
-                <action android:name="REVIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="REVIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".schedule.StudyScheduleActivity"/>
-        <activity android:name=".schedule.StudyScheduleBookLibraryActivity"/>
+        <activity android:name=".schedule.StudyScheduleActivity" />
+        <activity android:name=".schedule.StudyScheduleBookLibraryActivity" />
+        <activity android:name=".Utils.BookActivity"></activity>
     </application>
 
 </manifest>
