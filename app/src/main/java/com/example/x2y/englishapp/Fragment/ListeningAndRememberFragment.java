@@ -31,11 +31,11 @@ public class ListeningAndRememberFragment extends Fragment {
         view=inflater.inflate(R.layout.fragment_wordinfor,container,false);
         test=(TextView)view.findViewById(R.id.test);
         javaBean = ListeningAndRememberActivity.currentJavaBean;
-        test.setText(parseJavabean());
+        test.setText(parseJavabean(javaBean));
         button=(Button)view.findViewById(R.id.player);
         return view;
     }
-    public String parseJavabean()
+    public static String parseJavabean(JavaBean javaBean)
     {
         StringBuffer buf = new StringBuffer();
         buf.append(javaBean.getQuery()+":\nbasic:\n美式音标:"+javaBean.getBasic().getUsphonetic()+"\n英式音标:"+javaBean.getBasic().getUkphonetic()+"\n解释：\n");

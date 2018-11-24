@@ -4,9 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 import org.litepal.crud.DataSupport;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class JavaBean extends DataSupport {
+public class JavaBean extends DataSupport implements Serializable {
     /**
      * errorCode : 0
      * query : good
@@ -115,7 +116,7 @@ public class JavaBean extends DataSupport {
         this.web = web;
     }
 
-    public static class BasicBean {
+    public static class BasicBean  implements Serializable{
         /**
          * phonetic : gʊd
          * uk-phonetic : gʊd
@@ -185,7 +186,7 @@ public class JavaBean extends DataSupport {
         }
     }
 
-    public static class DictBean {
+    public static class DictBean implements Serializable{
         /**
          * url : yddict://m.youdao.com/dict?le=eng&q=good
          */
@@ -201,7 +202,7 @@ public class JavaBean extends DataSupport {
         }
     }
 
-    public static class WebdictBean {
+    public static class WebdictBean implements Serializable{
         /**
          * url : http://m.youdao.com/dict?le=eng&q=good
          */
@@ -217,7 +218,7 @@ public class JavaBean extends DataSupport {
         }
     }
 
-    public static class WebBean {
+    public static class WebBean  implements Serializable{
         /**
          * key : good
          * value : ["良好","善","美好"]
