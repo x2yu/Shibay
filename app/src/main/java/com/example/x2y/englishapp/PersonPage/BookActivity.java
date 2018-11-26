@@ -68,8 +68,8 @@ if(bookName.equals("四级词汇")){
         public void run() {
             //  j为请求的次数（1-226），每次请求就会得到20个
             for(int j=1;j<=3;j++) {
-                String appid = "81452";//要替换成自己的
-                String secret = "7a70115f47e1405e9644b274c7af6d7f";//要替换成自己的
+                String appid = "81584";//要替换成自己的
+                String secret = "2b29badf49b749d58a104447be055237";//要替换成自己的
                 final String res;
                 res = new ShowApiRequest("http://route.showapi.com/8-10", appid, secret)
                         .addTextPara("class_id", "45090")
