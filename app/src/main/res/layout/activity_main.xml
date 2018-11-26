@@ -11,10 +11,10 @@ android:orientation="vertical"
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="148dp"
         android:background="@drawable/shape_gradient"
-        android:padding="10dp"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,9 +30,9 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/search_bg"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:background="@drawable/search_bg"
             android:gravity="center"
             android:padding="10dp" />
 
@@ -51,9 +51,9 @@ android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_margin="10dp"
             android:gravity="center"
             android:text="博观约取，厚积薄发。"
-            android:layout_margin="10dp"
             android:textColor="#fff"
             android:textSize="16sp" />
 

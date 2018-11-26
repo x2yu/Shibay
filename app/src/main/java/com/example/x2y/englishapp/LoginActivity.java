@@ -1,10 +1,15 @@
 package com.example.x2y.englishapp;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Process;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -28,7 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     public CheckBox checkBox;
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
-   private   SharedPreferences prefUser;
+    private   SharedPreferences prefUser;
+    private  FloatingActionButton register;//漂浮按键
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
        // decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
         LitePal.getDatabase();
         Button login = (Button)findViewById(R.id.login);
-        Button register=(Button)findViewById(R.id.register);
+        register=(FloatingActionButton)findViewById(R.id.register);
         password=(EditText)findViewById(R.id.pw_etext);
         name=(EditText)findViewById(R.id.name_etext) ;
         //用于实现记住密码功能的shared
@@ -58,8 +64,23 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivityForResult(intent,1);
+
+                //设置跳转过渡动画 版本判断5.0以上才实现动画跳转
+                //先清楚默认过渡动画
+                getWindow().setEnterTransition(null);
+                getWindow().setExitTransition(null);
+                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this, register, "loginFab");
+                    Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                    ActivityCompat.startActivityForResult(LoginActivity.this,intent,1,options.toBundle());
+
+                }
+                else{
+                    Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                    startActivityForResult(intent,1);
+                }
+
 
             }
         });
@@ -110,6 +131,7 @@ public class LoginActivity extends AppCompatActivity {
                                 editorUser.apply();
                                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                                 startActivity(intent);
+                                finish();
 
 
                         }

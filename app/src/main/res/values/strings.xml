@@ -8,8 +8,31 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!--review_layout布局文件字符-->
+    <string name="selftest">自我评测</string>
+    <string name="review">温故知新</string>
+    <string name="listen">听音速记</string>
+    <string name="chooseinchinese">中文选词</string>
+    <string name="spelling">拼写练习</string>
+    <!--activity_self_test布局文件字符-->
+    <string name="remember">记得</string>
+    <string name="forget">不记得</string>
+    <string name="per_word">上一个</string>
+    <string name="next_word">下一个</string>
+    <!--SelfTestActivity文件字符-->
+    <string name="next_toast">没有下一个单词了亲</string>
+    <string name="previous_toast">没有上一个单词了亲</string>
+    <!--activity_spelling布局文件字符-->
+    <string name="finsihed">已完成：</string>
+    <string name="surplus">还剩余：</string>
+    <string name="check">检查</string>
+    <string name="spelling_success">恭喜您拼写正确！</string>
+    <string name="spelling_fail">拼写错误，请重试</string>
+    <string name="spelling_toast">提示</string>
+    <string name="review_finish_toast">恭喜您完成了本次复习</string>
+    <string name="cic_choose_right">恭喜您选择正确！</string>
+    <string name="cic_choose_worng">选择错误，再想想？</string>
 </resources>

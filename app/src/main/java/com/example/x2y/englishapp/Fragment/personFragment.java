@@ -38,7 +38,7 @@ public class personFragment extends Fragment
         TextView nameText =(TextView)view.findViewById(R.id.name_person);
         pref=MyApplication.getContext().getSharedPreferences("user",Context.MODE_PRIVATE);
         nameText.setText(pref.getString("name",""));
-        TextView idText=(TextView) view.findViewById(R.id.id_person_fore);
+        TextView idText=(TextView) view.findViewById(R.id.id_personid);
         idText.setText(""+pref.getInt("id",0));
         TextView shellText= (TextView)view.findViewById(R.id.shell_number);
         shellText.setText("贝壳："+pref.getInt("gold",0)+"个");

@@ -14,7 +14,6 @@
 
 
         <android.support.v7.widget.CardView
-            android:id="@+id/review_selftest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -29,6 +28,7 @@
             >
 
             <TextView
+                android:id="@+id/self_test"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -56,6 +56,7 @@
             android:foreground="@drawable/ripple_bg">
 
             <TextView
+                android:id="@+id/word_review"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -95,6 +96,7 @@
         </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -108,6 +110,7 @@
         android:foreground="@drawable/ripple_bg"
         >
         <TextView
+            android:id="@+id/choose_in_chinese"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -120,6 +123,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -132,6 +136,7 @@
         android:focusable="true"
         android:foreground="@drawable/ripple_bg">
         <TextView
+            android:id="@+id/spelling"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_gravity="center"
