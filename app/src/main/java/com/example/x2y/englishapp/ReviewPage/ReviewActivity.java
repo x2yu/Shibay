@@ -32,7 +32,7 @@ public class ReviewActivity extends AppCompatActivity {
      *index用于标识textview中显示的当前单词在列表中的下标，count用于标识查询到的表中的单词总数量，在测试时
      * 将其设置为3，在实际使用时设置为0，在数据库查询代码正常情况下count的值会被更新为列表长度+1
      */
-    private int index = 0, count = 0, max = 4, successCount = 0;
+    private int index = 0, count = 0, max = getResources().getInteger(R.integer.review_max_wordlist), successCount = 0;
     //声明成功flag列表
     private boolean[] successFlag = new boolean[max];
     List<Fragment> listFragment;//存储页面对象
@@ -46,20 +46,20 @@ public class ReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
         //获取资源文件中的布局
-        remember = (Button) findViewById(R.id.review_remember);
-        toast = (Button) findViewById(R.id.review_toast);
-        previous = (Button) findViewById(R.id.review_previous);
-        next = (Button) findViewById(R.id.review_next);
-        word = (TextView) findViewById(R.id.review_words);
-        means = (TextView) findViewById(R.id.review_means);
-        finsih = (TextView) findViewById(R.id.review_finish);
-        surplus = (TextView) findViewById(R.id.review_surplus);
-        reviewBack = (ImageView) findViewById(R.id.review_back);
+        remember = findViewById(R.id.review_remember);
+        toast = findViewById(R.id.review_toast);
+        previous = findViewById(R.id.review_previous);
+        next = findViewById(R.id.review_next);
+        word = findViewById(R.id.review_words);
+        means = findViewById(R.id.review_means);
+        finsih = findViewById(R.id.review_finish);
+        surplus = findViewById(R.id.review_surplus);
+        reviewBack = findViewById(R.id.review_back);
         //dbHelper = new MydatabaseHelper(this,"数据库名",null,1);
         //初始化单词列表，单词显示框，完成单词数，剩余单词数
         initWord();
         word.setText(wordList.get(index).getName());
-        finsih.setText(getResources().getString(R.string.speled) + successCount);
+        finsih.setText(getResources().getString(R.string.finsihed) + successCount);
         surplus.setText(getResources().getString(R.string.surplus) + (max - successCount));
         reviewBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,10 +89,10 @@ public class ReviewActivity extends AppCompatActivity {
                 for (int i = 0; i <= index; i++) {
                     if (successFlag[i]) successCount++;
                 }
-                finsih.setText(getResources().getString(R.string.speled) + successCount);
+                finsih.setText(getResources().getString(R.string.finsihed) + successCount);
                 surplus.setText(getResources().getString(R.string.surplus) + (max - successCount));
-                if(successCount==max){
-                    Toast.makeText(ReviewActivity.this,getResources().getString(R.string.review_finish_toast),Toast.LENGTH_SHORT).show();
+                if (successCount == max) {
+                    Toast.makeText(ReviewActivity.this, getResources().getString(R.string.review_finish_toast), Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }

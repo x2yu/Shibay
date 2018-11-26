@@ -25,7 +25,7 @@ public class SpellingActivity extends AppCompatActivity {
     private Button previous, next, check, toast;
     private EditText spel;
     private List<Word> wordList = new ArrayList<>();
-    private int index = 0, count = 0, successCount = 0, max = 4;
+    private int index = 0, count = 0, successCount = 0, max = getResources().getInteger(R.integer.spelling_max_wordlist);
     private boolean[] rightFlag = new boolean[max];
 
     //private MydatabaseHelper dbHelper; //数据库连接操作
@@ -35,22 +35,22 @@ public class SpellingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_spelling);
         //dbHelper = new MydatabaseHelper(this,"数据库名",null,1);
         //获取布局文件中的资源
-        back = (ImageView) findViewById(R.id.spelling_back);
-        mean = (TextView) findViewById(R.id.spelling_mean);
-        word = (TextView) findViewById(R.id.spelling_word);
-        speld = (TextView) findViewById(R.id.spelling_speled);
-        surplus = (TextView) findViewById(R.id.spelling_surplus);
-        previous = (Button) findViewById(R.id.spelling_previous);
-        next = (Button) findViewById(R.id.spelling_next);
-        check = (Button) findViewById(R.id.spelling_check);
-        toast = (Button) findViewById(R.id.spelling_toast);
-        spel = (EditText) findViewById(R.id.spelling_spel);
+        back = findViewById(R.id.spelling_back);
+        mean = findViewById(R.id.spelling_mean);
+        word = findViewById(R.id.spelling_word);
+        speld = findViewById(R.id.spelling_speled);
+        surplus = findViewById(R.id.spelling_surplus);
+        previous = findViewById(R.id.spelling_previous);
+        next = findViewById(R.id.spelling_next);
+        check = findViewById(R.id.spelling_check);
+        toast = findViewById(R.id.spelling_toast);
+        spel = findViewById(R.id.spelling_spel);
         //相关变量初始化
         //初始化要拼写的单词列表
         initWord();
         //待拼写单词，完成单词数，剩余单词数的初始化
         mean.setText(wordList.get(index).getMean());
-        speld.setText(getResources().getString(R.string.speled) + successCount);
+        speld.setText(getResources().getString(R.string.finsihed) + successCount);
         surplus.setText(getResources().getString(R.string.surplus) + (max - successCount));
 
         //返回按钮的点击监听事件，其中调用finish（）方法销毁当前活动，返回到之前的碎片
@@ -84,10 +84,10 @@ public class SpellingActivity extends AppCompatActivity {
                 for (int i = 0; i <= index; i++) {
                     if (rightFlag[i]) successCount++;
                 }
-                speld.setText(getResources().getString(R.string.speled) + successCount);
+                speld.setText(getResources().getString(R.string.finsihed) + successCount);
                 surplus.setText(getResources().getString(R.string.surplus) + (max - successCount));
-                if(successCount==max){
-                    Toast.makeText(SpellingActivity.this,getResources().getString(R.string.review_finish_toast),Toast.LENGTH_SHORT).show();
+                if (successCount == max) {
+                    Toast.makeText(SpellingActivity.this, getResources().getString(R.string.review_finish_toast), Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
