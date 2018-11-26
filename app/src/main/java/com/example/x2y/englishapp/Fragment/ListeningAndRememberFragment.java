@@ -41,7 +41,7 @@ public class ListeningAndRememberFragment extends Fragment {
         buf.append(javaBean.getQuery()+":\nbasic:\n美式音标:"+javaBean.getBasic().getUsphonetic()+"\n英式音标:"+javaBean.getBasic().getUkphonetic()+"\n解释：\n");
         for (int i=0;i<javaBean.getBasic().getExplains().size();i++)
         {
-            buf.append(javaBean.getBasic().getExplains().get(i)+"\n  ");
+            buf.append(javaBean.getBasic().getExplains().get(i)+"\n");
         }
         buf.append("网络词义:\n");
         for(int j=0;j<javaBean.getWeb().size();j++)
