@@ -1,7 +1,10 @@
 <litepal>
     <dbname value="English"></dbname>
-    <version value="5"></version>
+
+    <version value="8"></version>
+
     <list>
         <mapping class="com.example.x2y.englishapp.User.User"></mapping>
+        <mapping class="com.example.x2y.englishapp.bean.JavaBean"></mapping>
     </list>
 </litepal>

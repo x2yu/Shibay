@@ -24,11 +24,9 @@ public class SpellingActivity extends AppCompatActivity {
     private TextView mean, word, speld, surplus;
     private Button previous, next, check, toast;
     private EditText spel;
-    private List<Word> wordList = new ArrayList<>();
-    private int index = 0, count = 0, successCount = 0, max = getResources().getInteger(R.integer.spelling_max_wordlist);
-    private boolean[] rightFlag = new boolean[max];
+    private int index = 0, count = 0, successCount = 0;
+    initWord initWord = new initWord();
 
-    //private MydatabaseHelper dbHelper; //数据库连接操作
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,12 +44,10 @@ public class SpellingActivity extends AppCompatActivity {
         toast = findViewById(R.id.spelling_toast);
         spel = findViewById(R.id.spelling_spel);
         //相关变量初始化
-        //初始化要拼写的单词列表
-        initWord();
         //待拼写单词，完成单词数，剩余单词数的初始化
-        mean.setText(wordList.get(index).getMean());
+        mean.setText(initWord.wordList.get(index).getMean());
         speld.setText(getResources().getString(R.string.finsihed) + successCount);
-        surplus.setText(getResources().getString(R.string.surplus) + (max - successCount));
+        surplus.setText(getResources().getString(R.string.surplus) + (initWord.max - successCount));
 
         //返回按钮的点击监听事件，其中调用finish（）方法销毁当前活动，返回到之前的碎片
         back.setOnClickListener(new View.OnClickListener() {
@@ -68,11 +64,11 @@ public class SpellingActivity extends AppCompatActivity {
                 successCount = 0;
 
                 //判断单词是否拼写正确
-                if ((spel.getText().toString()).equals(wordList.get(index).getName())) {
+                if ((spel.getText().toString()).equals(initWord.wordList.get(index).getName())) {
                     //拼写正确，显示对应toast，单词完成数增加一个，并且当前单词对应的拼写flag置为true
                     Toast.makeText(SpellingActivity.this, getResources().getString(R.string.spelling_success), Toast.LENGTH_SHORT).show();
-                    word.setText(wordList.get(index).getName());
-                    rightFlag[index] = true;
+                    word.setText(initWord.wordList.get(index).getName());
+                    initWord.rightFlag[index] = true;
                 }
                 //拼写错误，显示对应toast，并且将单词编辑框置空
                 else {
@@ -82,11 +78,11 @@ public class SpellingActivity extends AppCompatActivity {
                 }
                 //遍历拼写flag列表，检查置为true的数量，得到拼写正确数，更新显示部分
                 for (int i = 0; i <= index; i++) {
-                    if (rightFlag[i]) successCount++;
+                    if (initWord.rightFlag[i]) successCount++;
                 }
                 speld.setText(getResources().getString(R.string.finsihed) + successCount);
-                surplus.setText(getResources().getString(R.string.surplus) + (max - successCount));
-                if (successCount == max) {
+                surplus.setText(getResources().getString(R.string.surplus) + (initWord.max - successCount));
+                if (successCount == initWord.max) {
                     Toast.makeText(SpellingActivity.this, getResources().getString(R.string.review_finish_toast), Toast.LENGTH_SHORT).show();
                     finish();
                 }
@@ -96,7 +92,7 @@ public class SpellingActivity extends AppCompatActivity {
         toast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                word.setText(wordList.get(index).getName());
+                word.setText(initWord.wordList.get(index).getName());
             }
         });
         //上一个按钮的点击监听事件
@@ -110,11 +106,11 @@ public class SpellingActivity extends AppCompatActivity {
                 else {
                     //当前不是第一个单词，当前单词下标减一，显示上一个单词意思
                     index--;
-                    mean.setText(wordList.get(index).getMean());
+                    mean.setText(initWord.wordList.get(index).getMean());
                     //判断上一个单词是否已经拼写正确，正确时显示单词意思，单词，错误时清空单词显示框和拼写框
-                    if (rightFlag[index]) {
-                        word.setText(wordList.get(index).getName());
-                        spel.setText(wordList.get(index).getName());
+                    if (initWord.rightFlag[index]) {
+                        word.setText(initWord.wordList.get(index).getName());
+                        spel.setText(initWord.wordList.get(index).getName());
                     } else {
                         word.setText(null);
                         spel.setText(null);
@@ -127,17 +123,17 @@ public class SpellingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //判断当前单词是否为最后一个单词
-                if (index == max - 1)
+                if (index == initWord.max - 1)
                     //当前单词为最后一个单词，显示一段提示性文字
                     Toast.makeText(SpellingActivity.this, getResources().getString(R.string.next_toast), Toast.LENGTH_SHORT).show();
                 else {
                     //当前单词不是最后一个单词，单词下标加一，显示下一个单词的意思
                     index++;
-                    mean.setText(wordList.get(index).getMean());
+                    mean.setText(initWord.wordList.get(index).getMean());
                     //判断当前单词是否已经拼写正确，正确时单词显示宽和单词拼写框显示当前单词，错误时清空单词显示框和单词拼写框
-                    if (rightFlag[index]) {
-                        word.setText(wordList.get(index).getName());
-                        spel.setText(wordList.get(index).getName());
+                    if (initWord.rightFlag[index]) {
+                        word.setText(initWord.wordList.get(index).getName());
+                        spel.setText(initWord.wordList.get(index).getName());
                     } else {
                         word.setText(null);
                         spel.setText(null);
@@ -145,39 +141,5 @@ public class SpellingActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    /*
-    这里是单词列表初始化的方法，其中注释了数据库访问代码，在正常使用时应当替换掉当前的测试代码
-     */
-    private void initWord() {
-//        SQLiteDatabase db = dbHelper.getWritableDatabase();
-//        //其中的表名应为已背单词列表
-//        Cursor cursor = db.query("表名", null, null, null, null, null, null);
-//        Random random = new Random();
-//        if (cursor.moveToFirst()) {
-//            do {
-//                //遍历取出对象
-//                String name = cursor.getString(cursor.getColumnIndex("name"));
-//                String mean = cursor.getString(cursor.getColumnIndex("mean"));
-//                Word word = new Word(name, mean);
-//                wordList.add(word);
-//                //初始化单词拼写flag列表为false
-//                rightFlag[count] = false;
-//                count++;
-//                if (count == max - 1) break;
-//            } while (cursor.moveToNext());
-//        }
-//        cursor.close();
-        //测试用单词，在数据库查询数据实现之后应将其删除或者注释
-        Word apple = new Word("apple", "n.苹果");
-        Word orange = new Word("orange", "n.橙子");
-        Word banana = new Word("banana", "n.香蕉");
-        Word peer = new Word("peer", "n.梨子");
-        wordList.add(apple);
-        wordList.add(orange);
-        wordList.add(banana);
-        wordList.add(peer);
-        for (int i = 0; i < 4; i++) rightFlag[i] = false;
     }
 }

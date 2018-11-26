@@ -8,8 +8,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+=======
+import android.widget.TextView;
+>>>>>>> efb15f75dffd1b15d08b46b0b3e187dd6aab54c9
 
+import com.example.x2y.englishapp.ListeningAndRememberActivity;
 import com.example.x2y.englishapp.R;
 import com.example.x2y.englishapp.ReviewPage.ChooseInChineseActivity;
 import com.example.x2y.englishapp.ReviewPage.ReviewActivity;
@@ -22,8 +29,10 @@ public class reviewFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.review_layout, container, false);
         initReview(view);
+
 
         return view;
     }
