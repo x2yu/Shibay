@@ -35,9 +35,4 @@
     <string name="review_finish_toast">恭喜您完成了本次复习</string>
     <string name="cic_choose_right">恭喜您选择正确！</string>
     <string name="cic_choose_worng">选择错误，再想想？</string>
-    <!--复习页面各个复习模块一次复习最大单词量,在实际使用当中应当进行修改-->
-    <integer name="review_max_wordlist">4</integer>
-    <integer name="spelling_max_wordlist">4</integer>
-    <integer name="selftest_max_wordlist">4</integer>
-    <integer name="cic_max_wordlist">8</integer>
 </resources>
