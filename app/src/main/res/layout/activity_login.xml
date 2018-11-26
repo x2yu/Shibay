@@ -1,134 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shape_gradient">
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:gravity="center"
-        android:text="辞海拾贝"
-        android:textColor="@android:color/white"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="5dp"
-        android:layout_marginTop="200dp"
-        android:id="@+id/first"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-       >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_gradient">
-
-            <TextView
-                android:id="@+id/name_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="输入用户昵称"
-                android:textColor="@android:color/white"/>
-
-            <EditText
-                android:id="@+id/name_etext"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:hint="请输入"
-
-                />
-        </LinearLayout>
-
-
-    </android.support.v7.widget.CardView>
+    android:background="@drawable/login_background">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/second"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/first"
-        android:layout_margin="10dp">
-
+        android:layout_width="300dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/cv"
+        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_gradient"
-            >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="45dp"
+             android:layout_marginTop="10dp">
+             <View
+                 android:layout_alignParentStart="true"
+                 android:layout_width="8dp"
+                 android:layout_height="match_parent"
+                 android:background="#2fa881"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:text="登录"
+                 android:textSize="18sp"
+                 android:textStyle="bold"
+                 android:layout_marginStart="50dp"/>
+         </RelativeLayout>
 
-            <TextView
-                android:id="@+id/pw_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="输入密码"
-                android:textColor="@android:color/white"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_margin="10dp"
+             android:paddingStart="50dp"
+             android:paddingEnd="30dp">
+             <android.support.design.widget.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:background="@null">
+                 <EditText
+                     android:id="@+id/name_etext"
+                     android:textSize="15sp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:inputType="textPersonName"
+                     android:hint="请输入用户名" />
 
-            <EditText
-                android:id="@+id/pw_etext"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:hint="请输入"
-                android:textColor="@android:color/white"
-                android:inputType="textPassword" />
+             </android.support.design.widget.TextInputLayout>
+         </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingStart="50dp"
+                android:paddingEnd="30dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null">
+                    <EditText
+                        android:id="@+id/pw_etext"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="请输入密码" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="90dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/loginbutton_bg"
+                    android:stateListAnimator="@animator/button_trasition"
+                    android:textColor="#9a9a9a"
+                    android:text="登录"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <CheckBox
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:id="@+id/check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textColor="#9a9a9a"
+                        android:text="记住密码"
+                        />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="#9a9a9a"
+                        android:text="忘记密码？"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/second"
-            android:layout_marginStart="100dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="5dp"
-            android:layout_marginTop="10dp"
-           >
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/second"
-                android:text="登陆"
-                android:id="@+id/login"
-                android:background="@drawable/shape_gradient"
-
-                />
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/second"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="10dp"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="5dp">
-
-            <Button
-                android:id="@+id/register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/second"
-                android:background="@drawable/shape_gradient"
-                android:text="注册" />
-
-        </android.support.v7.widget.CardView>
-    <CheckBox
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/second"
-        android:text="记住密码"
-        android:id="@+id/check"/>
-
+        android:layout_marginTop="25dp"
+        android:layout_alignTop="@+id/cv"
+        android:layout_alignEnd="@id/cv"
+        android:layout_marginEnd="-20dp"
+        android:src="@drawable/registe"
+        android:transitionName="Loginfab"
+        app:backgroundTint="#2fa881"
+        app:fabSize="normal"
+       />
 
 </RelativeLayout>
