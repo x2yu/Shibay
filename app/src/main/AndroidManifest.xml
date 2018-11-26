@@ -32,8 +32,7 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".LearnActivity"/>
-        <activity android:name=".RegisterActivity"
-            android:theme="@style/Translucent"/>
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".ReviewPage.SelfTestActivity" >
             <intent-filter>
                 <action android:name="SELF_TEST"/>
