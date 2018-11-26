@@ -43,6 +43,8 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ReviewPage.ChooseInChineseActivity"/>
+        <activity android:name=".ReviewPage.SpellingActivity"/>
         <activity android:name=".ReviewPage.ReviewActivity">
             <intent-filter>
                 <action android:name="REVIEW"/>
