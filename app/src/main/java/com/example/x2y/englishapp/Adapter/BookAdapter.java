@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.x2y.englishapp.R;
-import com.example.x2y.englishapp.Utils.BookActivity;
+import com.example.x2y.englishapp.PersonPage.BookActivity;
 import com.example.x2y.englishapp.bean.Books;
 
 import java.util.List;
