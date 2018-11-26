@@ -25,7 +25,7 @@ public class SelfTestActivity extends AppCompatActivity {
     index用于标识当前显示的单词的位置,max变量用作规定自我评测的单词列表大小,在测试时将其设置为3，在实际使用
     时应将其设置为19，其表示的是一次自我评测的单词量
      */
-    private int index = 0,count=0, max = 4, minword = 0, maxword = 0;
+    private int index = 0, count = 0, max = getResources().getInteger(R.integer.selftest_max_wordlist), minword = 0, maxword = 0;
     private int[] wordforecast = {1230, 2150};
     private boolean[] successFlag = new boolean[max];
 
@@ -40,12 +40,12 @@ public class SelfTestActivity extends AppCompatActivity {
         words = (TextView) findViewById(R.id.selftest_words);
         means = (TextView) findViewById(R.id.selftest_means);
         //单词量预测暂时没有实现，单词量预测应给予用户背单词多少和测试时记得的单词量进行综合判定
-        forecast = (TextView) findViewById(R.id.selftest_word_forecast);
-        remember = (Button) findViewById(R.id.selftest_remember);
-        forget = (Button) findViewById(R.id.selftest_forget);
-        preword = (Button) findViewById(R.id.selftest_previous);
-        nextword = (Button) findViewById(R.id.selftest_next);
-        selfBack = (ImageView) findViewById(R.id.selftest_back);
+        forecast = findViewById(R.id.selftest_word_forecast);
+        remember = findViewById(R.id.selftest_remember);
+        forget = findViewById(R.id.selftest_forget);
+        preword = findViewById(R.id.selftest_previous);
+        nextword = findViewById(R.id.selftest_next);
+        selfBack = findViewById(R.id.selftest_back);
         //初始化待测评单词列表
         initWord();
         //返回主页面按钮的点击监听事件
@@ -62,9 +62,9 @@ public class SelfTestActivity extends AppCompatActivity {
         remember.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                successFlag[index]=true;
+                successFlag[index] = true;
                 //判断是否到达了最后一个单词，到达了显示toast，否则显示下一个单词并且清空当前单词意思
-                if (index == max-1)
+                if (index == max - 1)
                     Toast.makeText(SelfTestActivity.this, getResources().getString(R.string.next_toast), Toast.LENGTH_SHORT).show();
                 else {
                     //更新单词量预测
@@ -83,7 +83,8 @@ public class SelfTestActivity extends AppCompatActivity {
         //不记得按钮的点击监听事件
         forget.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { {
+            public void onClick(View view) {
+                {
                     //传入预估单词数据，更新预估单词量
                     minword = forecastmincheck(wordforecast, wordList.get(index).getName().length(), false)[0];
                     maxword = forecastmincheck(wordforecast, wordList.get(index).getName().length(), false)[1];
@@ -105,8 +106,8 @@ public class SelfTestActivity extends AppCompatActivity {
                 else {
                     index--;
                     words.setText(wordList.get(index).getName());
-                    if(successFlag[index]==true)
-                    means.setText(wordList.get(index).getMean());
+                    if (successFlag[index])
+                        means.setText(wordList.get(index).getMean());
                     else {
                         means.setText(null);
                     }
@@ -123,8 +124,8 @@ public class SelfTestActivity extends AppCompatActivity {
                     Toast.makeText(SelfTestActivity.this, getResources().getString(R.string.next_toast), Toast.LENGTH_SHORT).show();
                 else {
                     index++;
-                    words.setText(wordList.get(index ).getName());
-                    if(successFlag[index]==true) means.setText(wordList.get(index ).getMean());
+                    words.setText(wordList.get(index).getName());
+                    if (successFlag[index]) means.setText(wordList.get(index).getMean());
                     else {
                         means.setText(null);
                     }
@@ -170,7 +171,7 @@ public class SelfTestActivity extends AppCompatActivity {
         wordList.add(orange);
         wordList.add(banana);
         wordList.add(peer);
-        for(int i=0;i<max;i++)successFlag[i]=false;
+        for (int i = 0; i < max; i++) successFlag[i] = false;
     }
 
     /*
