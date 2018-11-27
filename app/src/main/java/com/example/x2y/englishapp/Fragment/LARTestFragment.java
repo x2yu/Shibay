@@ -32,7 +32,6 @@ public class LARTestFragment extends Fragment  implements View.OnClickListener{
     View view;
     JavaBean javaBean;
     MediaPlayer mediaPlayer;
-    TextView test;
     List<JavaBean> radomList =new ArrayList<>() ;
     List<JavaBean> copyJavaBeanList = new ArrayList<>();
     int radomListSize=3;
@@ -51,7 +50,6 @@ public class LARTestFragment extends Fragment  implements View.OnClickListener{
         javaBean= ListeningAndRememberActivity.currentJavaBean;
         lara=(ListeningAndRememberActivity)getActivity();
         copyJavaBeanList=(List<JavaBean>) deepCopy(lara.javaBeanslist);
-        test= (TextView)view.findViewById(R.id.test);
         showInfor=(TextView)view.findViewById(R.id.show_infor);
         String showInforText=ListeningAndRememberFragment.parseJavabean(javaBean);
         showInfor.setText(showInforText);
@@ -140,15 +138,19 @@ public class LARTestFragment extends Fragment  implements View.OnClickListener{
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        test.setText(javaBean.getBasic().getExplains().get(0));
+
 
         showOptions();
         buttonPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mediaPlayer = new MediaPlayer();
+                StringBuilder builder = new StringBuilder(javaBean.getSpeakUrl());
+                builder.insert(4,"s");
+
                 try {
-                    mediaPlayer.setDataSource(getActivity(),Uri.parse(javaBean.getSpeakUrl()));
+
+                    mediaPlayer.setDataSource(getActivity(),Uri.parse(builder.toString()));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {

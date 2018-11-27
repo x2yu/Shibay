@@ -57,8 +57,12 @@ public class ListeningAndRememberFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 mediaPlayer = new MediaPlayer();
+                StringBuilder builder = new StringBuilder(javaBean.getSpeakUrl());
+                builder.insert(4,"s");
+
                 try {
-                    mediaPlayer.setDataSource(getActivity(),Uri.parse(javaBean.getSpeakUrl()));
+
+                    mediaPlayer.setDataSource(getActivity(),Uri.parse(builder.toString()));
                     mediaPlayer.prepare();
                     mediaPlayer.start();
                 } catch (IOException e) {

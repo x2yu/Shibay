@@ -33,7 +33,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_below="@id/start_button"
                 android:textSize="20sp"
-                />
+                android:id="@+id/statr_text"/>
 
 
         <android.support.design.widget.FloatingActionButton

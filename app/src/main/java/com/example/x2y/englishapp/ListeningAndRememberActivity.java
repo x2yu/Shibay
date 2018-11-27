@@ -27,6 +27,7 @@ import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.x2y.englishapp.Fragment.LARTestFragment;
@@ -73,6 +74,7 @@ public class ListeningAndRememberActivity extends AppCompatActivity {
     long lastClickTime=0;
     public  static JavaBean currentJavaBean;
     Chronometer timer;
+    TextView StartView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +82,7 @@ public class ListeningAndRememberActivity extends AppCompatActivity {
         timer=(Chronometer)findViewById(R.id.timer);
          mFragments = new ArrayList<Fragment>();
         javaBeanslist = new ArrayList<JavaBean>();
+        StartView=(TextView)findViewById(R.id.statr_text);
         buttonStart=(ImageView) findViewById(R.id.start_button);
         buttonNext=(FloatingActionButton)findViewById(R.id.next_button) ;
         buttonPrevious=(FloatingActionButton)findViewById(R.id.previous_button);
@@ -105,6 +108,7 @@ public class ListeningAndRememberActivity extends AppCompatActivity {
                    buttonStart.setVisibility(View.GONE);
                    buttonNext.setVisibility(View.VISIBLE);
                    buttonPrevious.setVisibility(View.VISIBLE);
+                   StartView.setVisibility(View.GONE);
                }
                else {
                    Toast.makeText(ListeningAndRememberActivity.this,"未请求到网络数据，请确保网络正常连接。",Toast.LENGTH_SHORT).show();
