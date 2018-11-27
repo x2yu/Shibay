@@ -134,14 +134,13 @@
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:layout_alignTop="@+id/cv"
         android:layout_alignEnd="@id/cv"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="-20dp"
         android:src="@drawable/registe"
         android:transitionName="Loginfab"
         app:backgroundTint="#2fa881"
-        app:fabSize="normal"
-       />
+        app:fabSize="normal"/>
 
 </RelativeLayout>

@@ -20,7 +20,7 @@ import java.util.List;
 public class LearnActivity extends AppCompatActivity {
     private ArrayList<CardMode> cardlist;
     private CardAdapter adapter;
-    private int i;
+    private int i = 10;
     private SwipeFlingAdapterView flingContainer;
     private List<List<String>> list = new ArrayList<>();
     private ImageView left, right;
@@ -97,7 +97,7 @@ public class LearnActivity extends AppCompatActivity {
 
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
-                cardlist.add(new CardMode("循环测试", "Lemon","柠檬","我请你吃柠檬吧",18, list.get(itemsInAdapter % imageUrls.length - 1)));
+                cardlist.add(new CardMode(" ", "完成学习！请返回！"," "," ", 777, list.get(itemsInAdapter % imageUrls.length - 1)));
                 adapter.notifyDataSetChanged();
                 i++;
             }
@@ -144,62 +144,31 @@ public class LearnActivity extends AppCompatActivity {
 
 
     private final String[] imageUrls = new String[]{
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=3378004326,2233636958&fm=26&gp=0.jpg",
-            "http://img4.imgtn.bdimg.com/it/u=4119948043,3375194617&fm=26&gp=0.jpg",
-            "http://img3.imgtn.bdimg.com/it/u=3164029131,1240243468&fm=26&gp=0.jpg",};
+            "file:///android_asset/img/ability_picture.jpg",
+            "file:///android_asset/img/abundance_picture.jpg",
+            "file:///android_asset/img/butterfly_picture.jpg",
+            "file:///android_asset/img/budget_picture.jpg",
+            "file:///android_asset/img/carbon_picture.jpg",
+            "file:///android_asset/img/centimeter_picture.jpg",
+            "file:///android_asset/img/diamond_picture.jpg",
+            "file:///android_asset/img/donation_picture.jpg",
+            "file:///android_asset/img/eliminate_picture.jpg",
+            "file:///android_asset/img/emotional_picture.jpg"
+    };
 
-    //在这里初始化单词卡片数据 加入50组数据测试
+    //在这里初始化单词卡片数据 加入20组数据测试
     private void initWord(List<CardMode> cardList){
-        for(int i = 0;i<50;i++){
-            cardList.add(new CardMode("单词"+i,"Apple","苹果"+i,"这是苹果啊苹果苹果苹果",21,list.get(i)));
-        }
+
+            cardList.add(new CardMode("单词","ability","n. 能力，技能，本领,资格","The public never had faith in his ability to handle the job.",1,list.get(0)));
+            cardList.add(new CardMode("单词","abundance","n. 大量；丰富 ;大量，极多"," There is an abundance of commodity supplies on the markets.",2,list.get(1)));
+            cardList.add(new CardMode("单词","butterfly","n. 蝴蝶； 蝶泳;轻浮的人;","Butterfly is my favorite insect — its wings are so beautiful.",3,list.get(2)));
+            cardList.add(new CardMode("单词","budget","n. 预算；v安排；adj.廉价的","The amount on the shopping list is over my budget.",4,list.get(3)));
+            cardList.add(new CardMode("单词","carbon","n. 碳；复写纸；adj. 碳的","Coal burns so easily because it contains lots of carbon.",5,list.get(4)));
+            cardList.add(new CardMode("单词","centimeter","n. 厘米，公分","Meter, centimeter and millimeter units used to measure length.",6,list.get(5)));
+            cardList.add(new CardMode("单词","diamond","n. 钻石；方块牌；棒球内场","Diamond rings are very popular among young couples.",7,list.get(6)));
+            cardList.add(new CardMode("单词","donation","n. 捐款，捐赠物；捐赠物","She made a donation to the earthquake-stricken area.",8,list.get(7)));
+            cardList.add(new CardMode("单词","eliminate","v. 消除，根除；消灭，淘汰","This device will eliminate the weeds in my garden.",9,list.get(8)));
+            cardList.add(new CardMode("单词","emotional","adj. 感情的，情绪的；沮丧的","Sometimes we are emotional; our mood changes from time to time.",10,list.get(9)));
+
     }
 }

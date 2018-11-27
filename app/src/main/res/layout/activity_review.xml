@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#efefef">
 
     <TextView
         android:layout_width="match_parent"
@@ -30,13 +32,15 @@
             android:background="@drawable/shape_gradient"
             android:gravity="center"
             android:text="@string/review"
+            android:textColor="#fff"
             android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="3"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/review_finish"
@@ -83,8 +87,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
             android:text="@string/remember"
+            android:textColor="#525252"
             android:textSize="20dp" />
 
         <TextView
@@ -98,8 +103,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="3"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
             android:text="@string/spelling_toast"
+            android:textColor="#525252"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -115,7 +121,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:textColor="#525252"
+            android:background="@drawable/cic_button_bg"
+            android:layout_marginBottom="10dp"
             android:text="@string/per_word" />
 
         <TextView
@@ -130,7 +138,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:textColor="#525252"
+            android:background="@drawable/cic_button_bg"
+            android:layout_marginBottom="10dp"
             android:text="@string/next_word" />
     </LinearLayout>
 </LinearLayout>

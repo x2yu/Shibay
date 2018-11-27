@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#efefef">
 
     <TextView
         android:layout_width="match_parent"
@@ -31,6 +32,7 @@
             android:background="@drawable/shape_gradient"
             android:gravity="center"
             android:text="@string/selftest"
+            android:textColor="#fff"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -70,8 +72,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
             android:text="@string/remember"
+            android:textColor="#525252"
             android:textSize="20dp" />
 
         <TextView
@@ -84,8 +87,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
             android:text="@string/forget"
+            android:textColor="#525252"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -100,8 +104,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
             android:text="@string/per_word"
+            android:textColor="#525252"
             android:textSize="20dp" />
 
         <TextView
@@ -114,8 +119,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
             android:text="@string/next_word"
+            android:textColor="#525252"
             android:textSize="20dp" />
     </LinearLayout>
 </LinearLayout>

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ReviewPage.SpellingActivity">
+    tools:context=".ReviewPage.SpellingActivity"
+    android:background="#efefef">
 
     <TextView
         android:layout_width="match_parent"
@@ -33,13 +34,16 @@
             android:background="@drawable/shape_gradient"
             android:gravity="center"
             android:text="@string/spelling"
+            android:textColor="#fff"
             android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="3"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/spelling_speled"
@@ -94,7 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="5"
-            android:background="@drawable/shape_gradient"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/cic_button_bg"
+            android:textColor="#424242"
             android:gravity="center"
             android:text="@string/check"
             android:textSize="20dp" />
@@ -108,8 +114,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
+            android:textColor="#424242"
             android:gravity="center"
             android:text="@string/spelling_toast"
             android:textSize="20dp" />
@@ -127,7 +135,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
+            android:layout_marginBottom="10dp"
+            android:textColor="#424242"
             android:text="@string/per_word"
             android:textSize="20dp" />
 
@@ -141,8 +151,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
             android:layout_weight="10"
-            android:background="@drawable/shape_gradient"
+            android:background="@drawable/cic_button_bg"
+            android:textColor="#424242"
             android:text="@string/next_word"
             android:textSize="20dp" />
     </LinearLayout>

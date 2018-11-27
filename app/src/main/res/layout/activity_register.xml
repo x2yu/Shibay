@@ -128,11 +128,11 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fabSize="normal"
             android:src="@drawable/plus_x"
             android:transitionName="loginFab"
             app:backgroundTint="#2fa881"
-            android:layout_gravity="center_horizontal|top" />
+            android:layout_gravity="center_horizontal|top"
+            app:fabSize="normal"/>
     </FrameLayout>
 
 

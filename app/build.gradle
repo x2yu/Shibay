@@ -43,7 +43,7 @@ dependencies {
     //   implementation files('E:/Shibay/libs/commons-lang3-3.1.jar')
     //    implementation files('E:/Shibay/libs/showapi_sdk.jar')
     //    implementation files('E:/Shibay/libs/fastjson-1.2.2.jar')
-    implementation files('C:/Users/Administrator/AndroidStudioProjects/Shibay/libs/commons-lang3-3.1.jar')
-    implementation files('C:/Users/Administrator/AndroidStudioProjects/Shibay/libs/fastjson-1.2.2.jar')
-    implementation files('C:/Users/Administrator/AndroidStudioProjects/Shibay/libs/showapi_sdk.jar')
+    implementation files('E:/Shibay/libs/commons-lang3-3.1.jar')
+    implementation files('E:/Shibay/libs/fastjson-1.2.2.jar')
+    implementation files('E:/Shibay/libs/showapi_sdk.jar')
 }

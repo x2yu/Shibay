@@ -21,8 +21,9 @@
         />
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/SwipFrame"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         app:max_visible="4"
         app:min_adapter_stack="6"
         app:rotation_degrees="16">
