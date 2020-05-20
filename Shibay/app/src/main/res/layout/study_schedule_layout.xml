@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED">
+
+       <LinearLayout
+           android:id="@+id/schedule_bar"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="?attr/actionBarSize"
+           android:padding="5dp"
+           android:background="@drawable/shape_gradient">
+
+           <ImageView
+               android:id="@+id/schedule_bar_back"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_gravity="bottom"
+               android:background="@drawable/schedule_back"/>
+
+           <TextView
+               android:id="@+id/schedule_bar_title"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:text="我的计划"
+               android:textSize="22dp"
+               android:textColor="#fff"
+               android:gravity="bottom"
+               android:layout_marginLeft="20dp"/>
+
+           <TextView
+               android:id="@+id/schedule_bar_edit"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="bottom"
+               android:paddingLeft="12dp"
+               android:paddingRight="12dp"
+               android:gravity="bottom|center"
+               android:text="编辑"
+               android:textColor="#fff"
+               android:textSize="16dp" />
+
+           <TextView
+               android:id="@+id/schedule_bar_ensure"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="bottom"
+               android:text="确定"
+               android:textSize="16dp"
+               android:textColor="#fff"
+               android:gravity="bottom|center"
+               android:paddingLeft="12dp"
+               android:paddingRight="12dp"
+               android:layout_marginRight="10dp"/>
+
+       </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black_overlay"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/schedule_bookshelf"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="30dp"
+                    android:text="书架"
+                    android:textSize="18dp"/>
+
+                <Button
+                    android:id="@+id/schedule_bookshelf_add"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/book_add" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#999"
+                android:layout_marginTop="2dp"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/schedule_bookshelf_show"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#777"/>
+
+            <TextView
+                android:id="@+id/schedule_book_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="四级单词"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/schedule_book_contentCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="词量：1000"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/schedule_book_learnedCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="已学习：100" />
+            <TextView
+                android:id="@+id/schedule_book_shedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="计划完成时间：2016年10月31日"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"/>
+            <!--书本布局
+                        <FrameLayout
+                            android:layout_width="80dp"
+                            android:layout_height="80dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/book_learning"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="四级单词"
+                                android:textColor="#7f7f7f"
+                                android:textSize="12dp" />
+
+                        </FrameLayout>
+                        -->
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="修改计划"
+                    android:textSize="18dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/schedule_radius_shap"
+                            android:text="每天背单词"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/schedule_radius_shap"
+                            android:text="完成天数"
+                            android:gravity="center"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"/>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="168dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#066"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="12dp"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/schedule_modify"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#066"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="12dp"/>
+                        <!-- <android.support.v7.widget.RecyclerView
+                             android:id="@+id/schedule_modify_worldCount"
+                             android:layout_width="0dp"
+                             android:layout_weight="1"
+                             android:layout_height="match_parent"/>-->
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/schedule_modify_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
